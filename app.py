@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 import emoji
 
 # Welcome text
-st.header('Are you at risk for heart disease? :heart:')
+st.title('Are you at risk of heart disease? :heart:')
 st.write('This application for checking the presence of the risk of heart disease.')
 st.write('---')
 st.write('Enter your lifestyle information below.')
@@ -96,23 +96,25 @@ predict = model.predict_proba(features_test)[:, 1][0]
 
 # Results
 st.write('---')
-st.subheader('***Your results:***')
-st.write('**Your risk of heart diseases: {:.2%}**'.format(predict))
-if predict > 0.5:
-    st.write('Attention\u2757You are at high risk of heart disease! :broken_heart:')
-    if hypertension == 4:
-        st.write('You have grade 1 hypertension. Pay attention to your blood pressure. Consult a cardiologist!\U0001f468\U0001f3fb\u200d\u2695\ufe0f')
-    if hypertension == 5:
-        st.write('You have grade 2 hypertension. Pay attention to your blood pressure. Consult a cardiologist!\U0001f468\U0001f3fb\u200d\u2695\ufe0f')
-    if hypertension == 6:
-        st.write('You have isolated systolic hypertension. Pay attention to your blood pressure. Consult a cardiologist!\U0001f468\U0001f3fb\u200d\u2695\ufe0f')
-    if hypertension == 7:
-        st.write('You have an unusual difference between your systolic and diastolic blood pressure readings. This is a reason consult a cardiologist!\U0001f468\U0001f3fb\u200d\u2695\ufe0f')
-    if age >= 50:
-        st.write('You are over 50 \U0001f475\U0001f3fb, which means you are at risk for heart disease by age.')
-    if cholesterol == 2:
-        st.write('Your cholesterol level is 2. This means that you have a moderate risk of developing vascular atherosclerosis, which affects the presence of heart disease. Consult a therapist!\U0001f469\U0001f3fb\u200d\u2695')
-    if cholesterol == 3:
-        st.write('Your cholesterol level is 3. This means that you have a high risk of developing vascular atherosclerosis, which affects the presence of heart disease. Consult a therapist!\U0001f469\U0001f3fb\u200d\u2695')  
-else:
-    st.write('Great! It looks like you are not at risk of heart disease! :sunglasses:')
+if st.button('Calculate Probability'):
+    st.subheader('***Your results:***')
+    if predict > 0.5:
+        st.error('**Your risk of heart diseases: {:.2%}**'.format(predict))
+        st.write('Attention\u2757You are at high risk of heart disease! :broken_heart:')
+        if hypertension == 4:
+            st.write('- You have grade 1 hypertension. Pay attention to your blood pressure. Consult a cardiologist!\U0001f468\U0001f3fb\u200d\u2695\ufe0f')
+        if hypertension == 5:
+            st.write('- You have grade 2 hypertension. Pay attention to your blood pressure. Consult a cardiologist!\U0001f468\U0001f3fb\u200d\u2695\ufe0f')
+        if hypertension == 6:
+            st.write('- You have isolated systolic hypertension. Pay attention to your blood pressure. Consult a cardiologist!\U0001f468\U0001f3fb\u200d\u2695\ufe0f')
+        if hypertension == 7:
+            st.write('- You have an unusual difference between your systolic and diastolic blood pressure readings. This is a reason consult a cardiologist!\U0001f468\U0001f3fb\u200d\u2695\ufe0f')
+        if age >= 50:
+            st.write('- You are over 50 \U0001f475\U0001f3fb, which means you are at risk for heart disease by age.')
+        if cholesterol == 2:
+            st.write('- Your cholesterol level is 2. This means that you have a moderate risk of developing vascular atherosclerosis, which affects the presence of heart disease. Consult a therapist!\U0001f469\U0001f3fb\u200d\u2695')
+        if cholesterol == 3:
+            st.write('- Your cholesterol level is 3. This means that you have a high risk of developing vascular atherosclerosis, which affects the presence of heart disease. Consult a therapist!\U0001f469\U0001f3fb\u200d\u2695')  
+    else:
+        st.success('**Your risk of heart diseases: {:.2%}**'.format(predict))
+        st.write('Great! It looks like you are not at risk of heart disease! :sunglasses:')
