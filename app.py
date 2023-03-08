@@ -1,7 +1,6 @@
 import streamlit as st
 import pickle
 import pandas as pd
-from sklearn.preprocessing import StandardScaler
 import emoji
 
 # Welcome text
@@ -24,7 +23,7 @@ alco = st.checkbox('Do you drink alcohol?')
 active = st.checkbox('Do you lead an active lifestyle?')
 
 # Calculation of additional information
-# BMI
+ # BMI
 bmi = round(weight / ((height / 100) ** 2), 1)
 
 def categorize_bmi(bmi):
@@ -45,7 +44,7 @@ def categorize_bmi(bmi):
 
 bmi_category = categorize_bmi(bmi)
 
-# Hypertension
+ # Hypertension
 def hypertension(ap_hi, ap_lo):
     if ap_hi < 120 and ap_lo < 80:
         return 1
@@ -79,18 +78,12 @@ smoke = bool_to_bin(smoke)
 alco = bool_to_bin(alco)
 active = bool_to_bin(active)
 
-# Features scaling 
-features = pd.read_csv('features_without_scaling.csv') # Processed features without scaling
-features_test = [[age, gender, height, weight, ap_hi, ap_lo, cholesterol, gluc, smoke, alco, active, bmi_category, hypertension]]
-scaler = StandardScaler()
-features = scaler.fit_transform(features)
-features_test = scaler.transform(features_test)
-
 # Model
 def load():
     with open ('model.pcl', 'rb') as fid:
         return pickle.load(fid)
 
+features_test = [[age, gender, height, weight, ap_hi, ap_lo, cholesterol, gluc, smoke, alco, active, bmi_category, hypertension]]
 model = load()
 predict = model.predict_proba(features_test)[:, 1][0]
 
