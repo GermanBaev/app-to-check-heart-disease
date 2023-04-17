@@ -1,8 +1,8 @@
-# Application to checking the presence of the risk of heart disease.:heart:
+# Heart Check Up – app to check the presence of the risk of heart disease :heart:
 
-In this repository: notebook with data processing and models testing, datasets, model and application.
+In this repository: notebook with data processing and models testing, datasets, model and app.
 
-[The web application is available at this link](https://germanbaev-app-for-check-heart-disease-app-6gjtog.streamlit.app/).
+[Heart Check Up is available at this link](https://germanbaev-app-to-check-heart-disease-app-h2lkot.streamlit.app/).
 
 ### **Assignment of tasks:**
 
@@ -24,4 +24,4 @@ The best results were obtained from ***the gradient boosting model*** on the val
 
 ### **Model application:**
 
-With the help of Streamlit, a Minimum Viable Product (MVP) was created in the form of a web application that allows, after entering information about a person's lifestyle information, to obtain the probability of having a risk of heart disease, as well as tips and recommendations on how to reduce this risk, in accordance with the parameters entered.
+With the help of Streamlit, a Minimum Viable Product (MVP) was created in the form of a web app that allows, after entering information about a person's lifestyle information, to obtain the probability of having a risk of heart disease, as well as tips and recommendations on how to reduce this risk, in accordance with the parameters entered.

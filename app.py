@@ -5,7 +5,7 @@ import emoji
 
 # Welcome text
 st.title('Are you at risk of heart disease? :heart:')
-st.write('This application to checking the presence of the risk of heart disease.')
+st.write('Heart Check Up – app to check the presence of the risk of heart disease.')
 st.write('---')
 st.write('Enter your lifestyle information below.')
 
