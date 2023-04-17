@@ -1,8 +1,8 @@
-# Application for checking the presence of the risk of heart disease.:heart:
+# Application to checking the presence of the risk of heart disease.:heart:
 
 In this repository: notebook with data processing and models testing, datasets, model and application.
 
-[Web application is available at this link](https://germanbaev-app-for-check-heart-disease-app-6gjtog.streamlit.app/).
+[The web application is available at this link](https://germanbaev-app-for-check-heart-disease-app-6gjtog.streamlit.app/).
 
 ### **Assignment of tasks:**
 
@@ -20,8 +20,8 @@ The best results were obtained from ***the gradient boosting model*** on the val
 
 | Model | ROC-AUC |
 | :- | :- |
-| CatBoost | 0.8040149414932136 |
+| CatBoost | 0.8040149414932136 |s
 
 ### **Model application:**
 
-With the help of Streamlit, an Minimum Viable Product (MVP) was created in the form of a web application that allows, after entering information about a person's lifestyle information, to obtain the probability of having a risk of heart disease, as well as tips and recommendations on how to reduce this risk, in accordance with the parameters entered.
+With the help of Streamlit, a Minimum Viable Product (MVP) was created in the form of a web application that allows, after entering information about a person's lifestyle information, to obtain the probability of having a risk of heart disease, as well as tips and recommendations on how to reduce this risk, in accordance with the parameters entered.

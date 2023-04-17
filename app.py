@@ -5,7 +5,7 @@ import emoji
 
 # Welcome text
 st.title('Are you at risk of heart disease? :heart:')
-st.write('This application for checking the presence of the risk of heart disease.')
+st.write('This application to checking the presence of the risk of heart disease.')
 st.write('---')
 st.write('Enter your lifestyle information below.')
 
@@ -62,7 +62,7 @@ def hypertension(ap_hi, ap_lo):
 
 hypertension = hypertension(ap_hi, ap_lo)
 
-# Conversion values to biniary
+# Conversion values to binary
 def gender_to_bin(gender):
     if gender == 'Male':
         return 0
@@ -101,7 +101,7 @@ if st.button('Calculate Probability'):
         if hypertension == 6:
             st.write('- You have isolated systolic hypertension. Pay attention to your blood pressure. Consult a cardiologist!\U0001f468\U0001f3fb\u200d\u2695\ufe0f')
         if hypertension == 7:
-            st.write('- You have an unusual difference between your systolic and diastolic blood pressure readings. This is a reason consult a cardiologist!\U0001f468\U0001f3fb\u200d\u2695\ufe0f')
+            st.write('- You have an unusual difference between your systolic and diastolic blood pressure readings. This is a reason to consult a cardiologist!\U0001f468\U0001f3fb\u200d\u2695\ufe0f')
         if age >= 50:
             st.write('- You are over 50 \U0001f475\U0001f3fb, which means you are at risk for heart disease by age.')
         if cholesterol == 2:
