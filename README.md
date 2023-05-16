@@ -2,7 +2,7 @@
 
 In this repository: notebook with data processing and models testing, datasets, model and app.
 
-[Heart Check Up is available at this link](https://germanbaev-app-to-check-heart-disease-app-h2lkot.streamlit.app/).
+[Heart Check Up is available at this link](https://germanbaev-app-to-check-heart-disease-streamlit-app-rmnnmw.streamlit.app).
 
 ### **Assignment of tasks:**
 
